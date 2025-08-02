@@ -1,3 +1,4 @@
+import logo from "../assets/logo/pushaan2.png";
 
 import React from "react";
 import {
@@ -6,34 +7,54 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
-import FloatingCTAButton from "../pages/FloatingCTAButton";
+import FloatingCTAButton from "./FloatingCTAButton";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-400 text-black px-6 py-12">
+    <footer className="bg-[#66656365] text-black px-6 py-12">
       <FloatingCTAButton />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand Section */}
         <div>
-          <h2 className="text-2xl font-bold flex items-center gap-2">
-            <span className="bg-yellow-400 text-black px-2 py-1 rounded">P</span>{" "}
-            PUSHAAN
-          </h2>
+          <div className="flex items-center">
+            <img
+              src={logo}
+              alt="Pushaan Logo"
+              className="h-12  w-40 object-contain"
+            />
+          </div>
           <p className="mt-3 text-sm leading-relaxed text-black">
-            From handpicked leaves to expertly crafted blends — we deliver purity,
-            aroma, and heritage in every cup. Experience the art of tea with Chaivatika.
+            From handpicked leaves to expertly crafted blends — we deliver
+            purity, aroma, and heritage in every cup. Experience the art of tea
+            with Pushan.
           </p>
           <div className="flex gap-4 mt-5 text-xl ">
-            <a href="#" className="hover:text-yellow-400 transition" aria-label="Facebook">
+            <a
+              href="#"
+              className="hover:text-yellow-400 transition"
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition" aria-label="Instagram">
+            <a
+              href="#"
+              className="hover:text-yellow-400 transition"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition" aria-label="X (Twitter)">
+            <a
+              href="#"
+              className="hover:text-yellow-400 transition"
+              aria-label="X (Twitter)"
+            >
               <FaXTwitter />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition" aria-label="LinkedIn">
+            <a
+              href="#"
+              className="hover:text-yellow-400 transition"
+              aria-label="LinkedIn"
+            >
               <FaLinkedinIn />
             </a>
           </div>
@@ -45,11 +66,31 @@ export default function Footer() {
             Company
           </h3>
           <ul className="space-y-2 text-sm ">
-            <li><a href="#home" className="hover:text-blue-600 ">{'\u203A'} Home</a></li>
-            <li><a href="#about" className="hover:text-blue-600">{'\u203A'} About Us</a></li>
-            <li><a href="#products" className="hover:text-blue-600">{'\u203A'} Products</a></li>
-            <li><a href="#factory" className="hover:text-blue-600">{'\u203A'} Factory Tour</a></li>
-            <li><a href="#contact" className="hover:text-blue-600">{'\u203A'} Contact</a></li>
+            <li>
+              <a href="#home" className="hover:text-blue-600 ">
+                {"\u203A"} Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="hover:text-blue-600">
+                {"\u203A"} About Us
+              </a>
+            </li>
+            <li>
+              <a href="#products" className="hover:text-blue-600">
+                {"\u203A"} Products
+              </a>
+            </li>
+            <li>
+              <a href="#factory" className="hover:text-blue-600">
+                {"\u203A"} Factory Tour
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-blue-600">
+                {"\u203A"} Contact
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -59,11 +100,31 @@ export default function Footer() {
             Our Offerings
           </h3>
           <ul className="space-y-2 text-sm ">
-            <li><a href="#green-tea" className="hover:text-blue-600">Green Tea</a></li>
-            <li><a href="#black-tea" className="hover:text-blue-600">Black Tea</a></li>
-            <li><a href="#herbal-tea" className="hover:text-blue-600">Herbal Blends</a></li>
-            <li><a href="#exports" className="hover:text-blue-600">Bulk Export</a></li>
-            <li><a href="#custom" className="hover:text-blue-600">Private Labeling</a></li>
+            <li>
+              <a href="#green-tea" className="hover:text-blue-600">
+                Green Tea
+              </a>
+            </li>
+            <li>
+              <a href="#black-tea" className="hover:text-blue-600">
+                Black Tea
+              </a>
+            </li>
+            <li>
+              <a href="#herbal-tea" className="hover:text-blue-600">
+                Herbal Blends
+              </a>
+            </li>
+            <li>
+              <a href="#exports" className="hover:text-blue-600">
+                Bulk Export
+              </a>
+            </li>
+            <li>
+              <a href="#custom" className="hover:text-blue-600">
+                Private Labeling
+              </a>
+            </li>
           </ul>
         </div>
 

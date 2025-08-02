@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import comboImage from "../assets/tea/tea6.jpg"; // replace with actual image path
-import bgImage from "../assets/banners/bgcombo.jpg";
+import comboImage from "../assets/products/hero13.png"; // replace with actual image path
+import bgImage from "../assets/banners/bgcombo.jpg"
 
 const ChaiCombo = () => {
   const [quantity, setQuantity] = useState(1);
@@ -24,7 +24,7 @@ const ChaiCombo = () => {
           <img
             src={comboImage}
             alt="Chai Combo"
-            className="rounded-md shadow-lg w-[80%]"
+            className="rounded-2xl  shadow-2xl  hover:shadow-cyan-600  tran w-[70%]"
           />
         </div>
 

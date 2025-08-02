@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FaBriefcase, FaSmile, FaUsers,FaAward } from "react-icons/fa";
 import ProjectGallery from './ProjectGallery';
+import leftTrees from "../../src/assets/home/home1.png";
+import rightTrees from "../assets/home/home2.png";
+import leaf from "../assets/home/leaf.png";
 
 const stats = [
   {
@@ -63,11 +66,33 @@ const StatCard = ({ icon, label, value, suffix }) => {
 const StatsAchievements = () => {
   return (
     <section className="bg-[#66656365]  text-black py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold  mb-4">Our Achievements</h2>
-        <p className="text-gray-900 mb-12 max-w-xl mx-auto">
-          We take pride in our dedication, quality, and consistent delivery. Here's a quick snapshot of our success.
-        </p>
+           <div className="flex flex-col items-center mb-12 relative">
+              <div className="flex items-center justify-between w-full max-w-6xl px-4">
+                <img
+                  src={leftTrees}
+                  alt="Left Trees"
+                  className="h-10 md:h-12 lg:h-18 object-contain"
+                />
+      
+                <div className="text-center flex-1 px-2">
+                  <h4 className="uppercase tracking-wider text-sm md:text-xl text-blue-800">
+                   Our Achievements
+                  </h4>
+                  <h1 className="text-md sm:text-2xl md:text-xl font-serif mt-1 text-blue-800">
+                   We take pride in our dedication, quality, and consistent delivery. Here's a quick snapshot of our success.
+        
+                  </h1>
+                  <img src={leaf} alt="Leaf" className="mx-auto mt-2 h-3 md:h-4 object-contain" />
+                </div>
+      
+                <img
+                  src={rightTrees}
+                  alt="Right Trees"
+                  className="h-8 md:h-12 lg:h-18 object-contain"
+                />
+              </div>
+            </div>
+    
 
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
           {stats.map((item, index) => (
@@ -80,7 +105,7 @@ const StatsAchievements = () => {
             />
           ))}
         </div>
-      </div>
+      
       
     </section>
   );

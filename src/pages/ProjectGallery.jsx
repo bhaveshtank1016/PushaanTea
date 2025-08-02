@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FaSearchPlus } from "react-icons/fa";
-import hero11 from "../assets/products/hero11.png";
+import hero11 from "../assets/products/royalproduct.png";
 import hero12 from "../assets/products/hero13.png";
-import hero13 from "../assets/products/hero14.png";
+import hero13 from "../assets/products/product5.png";
+import leftTrees from "../../src/assets/home/home1.png";
+import rightTrees from "../assets/home/home2.png";
+import leaf from "../assets/home/leaf.png";
 
 const projectData = [
   {
@@ -42,15 +45,38 @@ const ProjectGallery = () => {
   return (
     <section
       id="ProjectGallery"
-      className="bg-gray-400 text-black py-20 px-6 transition-colors duration-300"
+      className="bg-[#66656365] text-black py-20 px-6 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-4 text-black">
-          Project Gallery
-        </h2>
-        <p className="text-center text-gray-900 mb-10">
-          Explore some of our recent projects across various services.
-        </p>
+        <div className="flex flex-col items-center mb-12 relative">
+          <div className="flex items-center justify-between w-full max-w-6xl px-4">
+            <img
+              src={leftTrees}
+              alt="Left Trees"
+              className="h-10 md:h-12 lg:h-18 object-contain"
+            />
+
+            <div className="text-center flex-1 px-2">
+              <h4 className="uppercase tracking-wider text-sm md:text-xl text-blue-800">
+                Project Gallery
+              </h4>
+              <h1 className="text-md sm:text-2xl md:text-xl font-serif mt-1 text-blue-800">
+                Explore some of our recent projects across various services.
+              </h1>
+              <img
+                src={leaf}
+                alt="Leaf"
+                className="mx-auto mt-2 h-3 md:h-4 object-contain"
+              />
+            </div>
+
+            <img
+              src={rightTrees}
+              alt="Right Trees"
+              className="h-8 md:h-12 lg:h-18 object-contain"
+            />
+          </div>
+        </div>
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">

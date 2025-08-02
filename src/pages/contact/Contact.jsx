@@ -28,16 +28,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#66656365] text-black pt-20 px-4 py-10">
+    <div className="bg-gray-400 text-black pt-20 px-4 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Factory Info & Map */}
         <section>
           <h2 className="text-3xl font-bold mb-4">Visit Our Factory</h2>
           <p className="mb-4">
-            <strong>Address:</strong> NH-31, Greenleaf Tea Factory, Siliguri, West Bengal
+            <strong>Address:</strong> A12, Rd No 3, near evening news,
+            
           </p>
           <p className="mb-4 ">
-            <strong>Landmark:</strong> Just 10 mins from Siliguri Railway Station
+            <strong>Landmark:</strong> Sudarshanpura, Bais Godam, Jaipur, Rajasthan 302007
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm  mt-6">
@@ -66,7 +67,10 @@ const Contact = () => {
               <MapPin className="text-blue-600" />
               <div>
                 <p className="font-semibold">Location</p>
-                <p>Bais Godam-302006</p>
+                <p>
+                  A12, Rd No 3, near evening news, Sudarshanpura, Bais Godam,
+                  Jaipur, Rajasthan 302007
+                </p>
               </div>
             </div>
           </div>
@@ -91,7 +95,7 @@ const Contact = () => {
           <div className="mt-6 rounded-lg overflow-hidden shadow-lg">
             <iframe
               title="Factory Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11450.059511258628!2d88.4288896!3d26.7271015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e441d479c22d91%3A0x7b49dbe326fe03a7!2sSiliguri%20Junction!5e0!3m2!1sen!2sin!4v1712590766256!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d113864.6114181875!2d75.70913812745694!3d26.89495329527372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x396db43d861e3ceb%3A0x7b70a1cc9bd2914a!2sA12%2C%20Rd%20No%203%2C%20near%20evening%20news%2C%20Sudarshanpura%2C%20Bais%20Godam%2C%20Jaipur%2C%20Rajasthan%20302007!3m2!1d26.8949592!2d75.7915256!5e0!3m2!1sen!2sin!4v1754157597633!5m2!1sen!2sin"
               width="100%"
               height="300"
               style={{ border: 0 }}
@@ -103,8 +107,10 @@ const Contact = () => {
 
         {/* Inquiry / Visit Form */}
         <section>
-          <div className="bg-[#a3acb9]  p-6 rounded-xl shadow-md w-full">
-            <h3 className="text-2xl font-bold mb-4">Book a Factory Visit / Send Inquiry</h3>
+          <div className="bg-[#F5F7FA]     p-6 rounded-xl shadow-md w-full">
+            <h3 className="text-2xl font-bold mb-4">
+              Book a Factory Visit / Send Inquiry
+            </h3>
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
@@ -127,13 +133,13 @@ const Contact = () => {
                 name="phone"
                 type="tel"
                 placeholder="Phone Number"
-                 className="border border-gray-800 p-3 rounded w-full text-black"
+                className="border border-gray-800 p-3 rounded w-full text-black"
               />
 
               <select
                 name="product"
                 required
-                 className="border border-gray-800 p-3 rounded w-full text-black"
+                className="border border-gray-800 p-3 rounded w-full text-black"
               >
                 <option value="">Select Product</option>
                 <option value="CTC Tea">CTC Tea</option>
@@ -146,7 +152,7 @@ const Contact = () => {
                 name="quantity"
                 type="text"
                 placeholder="Required Quantity (e.g., 500kg)"
-                 className="border border-gray-800 p-3 rounded w-full text-black"
+                className="border border-gray-800 p-3 rounded w-full text-black"
               />
 
               <input
@@ -160,7 +166,7 @@ const Contact = () => {
                 name="message"
                 rows="4"
                 placeholder="Additional Instructions / Inquiry"
-               className="border border-gray-800 p-3 rounded w-full text-black"
+                className="border border-gray-800 p-3 rounded w-full text-black"
               />
 
               <button
@@ -178,5 +184,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-

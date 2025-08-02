@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import leftTrees from "../../src/assets/home/home1.png";
+import rightTrees from "../assets/home/home2.png";
+import leaf from "../assets/home/leaf.png";
 
 const blogPosts = [
   {
@@ -64,7 +67,8 @@ const blogPosts = [
       <br/><br/>
       <em>Perfect brewing reveals tea's full personality—aroma, taste, and wellness.</em>
     `,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-s9_dveK42F9n2xnUJsm5QW8VTtPTlZvOg&s",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-s9_dveK42F9n2xnUJsm5QW8VTtPTlZvOg&s",
     date: "June 28, 2025",
   },
 ];
@@ -98,14 +102,35 @@ const BlogKnowledgeCenter = () => {
       <div className="max-w-6xl mx-auto">
         {!selectedPost ? (
           <>
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Tea Knowledge Hub
-              </h2>
-              <p className="text-gray-900 mt-3 text-base md:text-lg max-w-2xl mx-auto">
-                Discover everything about tea—from brewing tips and health
-                benefits to industry insights and traditions.
-              </p>
+            <div className="flex flex-col items-center mb-12 relative">
+              <div className="flex items-center justify-between w-full max-w-6xl px-4">
+                <img
+                  src={leftTrees}
+                  alt="Left Trees"
+                  className="h-10 md:h-12 lg:h-18 object-contain"
+                />
+
+                <div className="text-center flex-1 px-2">
+                  <h4 className="uppercase tracking-wider text-sm md:text-xl text-blue-800">
+                    Tea Knowledge Hub
+                  </h4>
+                  <h1 className="text-md sm:text-2xl md:text-xl font-serif mt-1 text-blue-800">
+                    Discover everything about tea—from brewing tips and health
+                    benefits to industry insights and traditions.
+                  </h1>
+                  <img
+                    src={leaf}
+                    alt="Leaf"
+                    className="mx-auto mt-2 h-3 md:h-4 object-contain"
+                  />
+                </div>
+
+                <img
+                  src={rightTrees}
+                  alt="Right Trees"
+                  className="h-8 md:h-12 lg:h-18 object-contain"
+                />
+              </div>
             </div>
 
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
