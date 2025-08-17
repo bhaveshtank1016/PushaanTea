@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
 import logo from "../assets/logo/pushaan2.png";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [navbarBg, setNavbarBg] = useState(false);
+  const [showTopHeader, setShowTopHeader] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 600) {
-        setNavbarBg(true); // Show white bg
+      if (window.scrollY > 100) {
+        setNavbarBg(true);
+        setShowTopHeader(false); // Top header hide
       } else {
-        setNavbarBg(false); // Transparent
+        setNavbarBg(false);
+        setShowTopHeader(true); // Top header show again
       }
     };
 
@@ -21,20 +32,52 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`w-full p-2 fixed top-0 left-0 z-50 transition-all duration-300 ${
-        navbarBg ? "bg-white" : "bg-transparent"
+      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+        navbarBg ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <a href="/"><div className="flex items-center">
-          <img
-            src={logo}
-            alt="Pushaan Logo"
-            className="h-12  w-40 object-contain"
-          />
-        </div></a>
+      {/* Top Header (Hide on Scroll) */}
+      {showTopHeader && (
+        <div className="bg-[#463f3f] text-white flex justify-between items-center px-6 py-2 text-sm transition-all duration-500">
+          <div className="flex gap-6">
+            <div className="flex items-center gap-2">
+              <FaPhoneAlt />
+              <span>+91-97999986623</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaEnvelope />
+              <span>pushaan@greenleaftea.com</span>
+            </div>
+          </div>
+          <div className="flex gap-4 text-lg">
+            <a href="#" className="hover:text-gray-300">
+              <FaFacebook />
+            </a>
+            <a href="#" className="hover:text-gray-300">
+              <FaTwitter />
+            </a>
+            <a href="#" className="hover:text-gray-300">
+              <FaInstagram />
+            </a>
+            <a href="#" className="hover:text-gray-300">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+      )}
 
+      {/* Main Navbar */}
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+        {/* Logo */}
+        <a href="/">
+          <div className="flex items-center">
+            <img
+              src={logo}
+              alt="Pushaan Logo"
+              className="h-12 w-40 object-contain"
+            />
+          </div>
+        </a>
 
         {/* Mobile Button */}
         <div className="lg:hidden">

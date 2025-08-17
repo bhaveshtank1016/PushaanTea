@@ -1,29 +1,36 @@
 import React from "react";
 import { PhoneCall } from "lucide-react";
-import { FaWhatsapp, FaRegEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaArrowUp  } from "react-icons/fa";
 
 const FloatingCTAButton = () => {
+  // Scroll to top/home section
+  const handleScrollHome = () => {
+    const homeSection = document.getElementById("home"); // make sure your homepage section has id="home"
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // fallback
+    }
+  };
   return (
     <>
       {/* Middle-right Enquiry Button */}
-   <a
-  href="#contact"
-  className="fixed top-1/2 right-0 transform -translate-y-1/2 bg-yellow-500 
+      <a
+        href="#contact"
+        className="fixed top-1/2 right-0 transform -translate-y-1/2 bg-yellow-500 
     hover:bg-yellow-600 text-white px-2 py-2 text-sm font-medium z-50 shadow-md border-l-2 border-yellow-700"
-  style={{
-    writingMode: "vertical-rl",
-    textOrientation: "mixed",
-    borderRadius: "4px 0 0 4px", // soft left edge
-    height: "120px",             // vertical size
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }}
->
-  Booking
-</a>
-
-
+        style={{
+          writingMode: "vertical-rl",
+          textOrientation: "mixed",
+          borderRadius: "4px 0 0 4px", // soft left edge
+          height: "120px", // vertical size
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        Booking
+      </a>
 
       {/* Bottom-right WhatsApp and Call Buttons */}
       <div className="fixed bottom-6 right-4 flex flex-col gap-3 z-50">
@@ -45,6 +52,13 @@ const FloatingCTAButton = () => {
           <span className="hidden sm:block">Call Now</span>
         </a>
       </div>
+      {/* Left-side Home/Top Button */}
+      <button
+        onClick={handleScrollHome}
+        className="fixed bottom-6 left-4 bg-red-500 hover:bg-red-600 text-white p-4 rounded-full shadow-lg z-50 flex items-center justify-center"
+      >
+        <FaArrowUp size={20} />
+      </button>
     </>
   );
 };

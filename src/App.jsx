@@ -15,6 +15,7 @@ import IndustriesWeServe from "./pages/IndustriesWeServe";
 import TeaFlavorGIF from "./pages/TeaFlavorGIF";
 import OurAchievements from "./pages/OurAchievements";
 import FeaturedTeas from "./pages/FeaturedTeas"
+import VideoGallery from "./pages/videogallery/VideoGallery";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
       <OurAchievements />
       <IndustriesWeServe />
       <WhyChooseUs />
+      <VideoGallery/>
       <ClientTestimonials />
       <ProjectGallery />
 
